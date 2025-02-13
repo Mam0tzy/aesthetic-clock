@@ -1,172 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
-    <script type="text/javascript">
-        aclib.runPop({
-            zoneId: '9538874',
-        });
-    </script>
     <meta name="google-site-verification" content="6KjKKmJGaYMroeN7WyZz1Qs1gF0TWkyMT9iW4Jh2gzc" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Meta Tags -->
-    <title>Aesthetic Digital Clock | Live Time Display</title>
-    <meta name="description" content="A beautiful, animated digital clock with a calming dark theme and floating elements. Features real-time updates and smooth animations.">
-    <meta name="keywords" content="digital clock, live clock, aesthetic clock, dark theme clock, web clock">
-    <meta name="author" content="mam0tzy">
     
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="Aesthetic Digital Clock">
-    <meta property="og:description" content="A beautiful, animated digital clock with a calming dark theme and floating elements.">
+    <!-- Enhanced SEO Meta Tags -->
+    <title>Aesthetic Digital Clock - Beautiful Dark Theme Live Time Display | Free Online Clock</title>
+    <meta name="description" content="Experience our stunning dark theme digital clock with smooth animations and calming effects. Perfect for relaxation, focus, and productivity. Free online clock with no installation required.">
+    <meta name="keywords" content="digital clock, live clock, aesthetic clock, dark theme clock, web clock, online clock, relaxation clock, animated clock">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
     <meta property="og:type" content="website">
+    <meta property="og:title" content="Aesthetic Digital Clock - Beautiful Dark Theme Display">
+    <meta property="og:description" content="Experience our stunning dark theme digital clock with smooth animations and calming effects.">
+    <meta property="og:image" content="https://mam0tzy.github.io/aesthetic-clock/clock-preview.png">
     <meta property="og:url" content="https://mam0tzy.github.io/aesthetic-clock/">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aesthetic Digital Clock">
+    <meta name="twitter:description" content="Beautiful dark theme digital clock with smooth animations and calming effects.">
+    <meta name="twitter:image" content="https://mam0tzy.github.io/aesthetic-clock/clock-preview.png">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://your-domain.com">
+    <link rel="canonical" href="https://mam0tzy.github.io/aesthetic-clock/">
 
     <style>
         body {
             margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(-45deg, #0f0f0f, #232741, #1a1b26, #2d1b2d);
-            background-size: 400% 400%;
-            animation: gradient 20s ease infinite;
             font-family: 'Arial', sans-serif;
-            overflow: hidden;
+            background: linear-gradient(-45deg, #1a1a1a, #2c2c2c);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .main-content {
+            margin: 40px 0;
+        }
+
+        .preview-section {
+            text-align: center;
+        }
+
+        .preview-image {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #4a90e2, #67b26f);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .features {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features h2 {
+            margin-top: 0;
+        }
+
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .features li {
+            margin-bottom: 15px;
+            padding-left: 25px;
             position: relative;
         }
 
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, transparent, rgba(0, 0, 0, 0.3));
-            pointer-events: none;
-        }
-
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        .floating-circle {
+        .features li:before {
+            content: "✓";
             position: absolute;
-            background: linear-gradient(45deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.05));
-            border-radius: 50%;
-            pointer-events: none;
-            filter: blur(2px);
-        }
-
-        .circle1 {
-            width: 200px;
-            height: 200px;
-            top: -100px;
-            left: 10%;
-            animation: float1 15s ease-in-out infinite;
-        }
-
-        .circle2 {
-            width: 300px;
-            height: 300px;
-            bottom: -150px;
-            right: 15%;
-            animation: float2 18s ease-in-out infinite;
-        }
-
-        .circle3 {
-            width: 250px;
-            height: 250px;
-            top: 40%;
-            left: 15%;
-            animation: float3 20s ease-in-out infinite;
-        }
-
-        @keyframes float1 {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(100px, 100px) rotate(120deg); }
-            66% { transform: translate(-50px, 200px) rotate(240deg); }
-        }
-
-        @keyframes float2 {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(-150px, -100px) rotate(-120deg); }
-            66% { transform: translate(100px, -150px) rotate(-240deg); }
-        }
-
-        @keyframes float3 {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(150px, -100px) rotate(120deg); }
-            66% { transform: translate(-100px, -50px) rotate(240deg); }
-        }
-
-        .clock {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 3rem 5rem;
-            border-radius: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            z-index: 1;
-            transition: all 0.5s ease;
-        }
-
-        .clock:hover {
-            transform: scale(1.02);
-            background: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .time {
-            font-size: 5.5rem;
-            color: rgba(255, 255, 255, 0.8);
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-            letter-spacing: 6px;
-            font-weight: 200;
-        }
-
-        .colon {
-            animation: blink 2.5s ease-in-out infinite;
-            opacity: 1;
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0.2;
-            }
+            left: 0;
+            color: #67b26f;
         }
     </style>
-</head>
-<body>
-    <!-- Main content wrapper for semantic structure -->
-    <main>
-        <div class="overlay" aria-hidden="true"></div>
-        <div class="floating-circle circle1" aria-hidden="true"></div>
-        <div class="floating-circle circle2" aria-hidden="true"></div>
-        <div class="floating-circle circle3" aria-hidden="true"></div>
-        
-        <!-- Semantic structure for the clock -->
-        <section class="clock" aria-label="Digital Clock">
-            <h1 class="time" id="time">00:00</h1>
-        </section>
-    </main>
 
-    <!-- Structured data for SEO -->
+    <!-- Schema Markup -->
     <script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -175,23 +131,57 @@
         "description": "A beautiful, animated digital clock with a calming dark theme and floating elements.",
         "url": "https://your-domain.com",
         "applicationCategory": "Utility",
-        "operatingSystem": "Any"
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "screenshot": "https://your-domain.com/clock-preview.png",
+        "featureList": [
+            "Beautiful dark theme design",
+            "Smooth floating animations",
+            "Calming visual effects",
+            "Real-time updates",
+            "Fully responsive design"
+        ]
     }
     </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Aesthetic Digital Clock</h1>
+            <p>Experience time in a beautiful, calming dark theme environment</p>
+        </header>
 
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const time = `${hours}<span class="colon">:</span>${minutes}`;
-            document.getElementById('time').innerHTML = time;
-            // Add ARIA live region update
-            document.getElementById('time').setAttribute('aria-label', `Current time is ${hours} hours and ${minutes} minutes`);
-        }
+        <main class="main-content">
+            <div class="preview-section">
+                <img src="clock-preview.png" 
+                     alt="Aesthetic Digital Clock Preview - Dark theme clock with floating animations" 
+                     class="preview-image"
+                     width="800"
+                     height="400"
+                     loading="eager">
+                <a href="clock.html" class="cta-button" title="Open the aesthetic digital clock">Open Clock</a>
+                
+                <div class="features">
+                    <h2>Features</h2>
+                    <ul>
+                        <li>Beautiful dark theme design</li>
+                        <li>Smooth floating animations</li>
+                        <li>Calming visual effects</li>
+                        <li>Real-time updates</li>
+                        <li>Fully responsive design</li>
+                        <li>No installation required</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
 
-        updateClock();
-        setInterval(updateClock, 1000);
-    </script>
+        <footer>
+            <p>© <script>document.write(new Date().getFullYear())</script> Aesthetic Digital Clock. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html> 
