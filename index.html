@@ -122,6 +122,15 @@
             left: 0;
             color: #67b26f;
         }
+
+        .ad-container {
+            position: fixed;  /* Keeps the ad in place while scrolling */
+            left: 0;          /* Pushes it to the left edge */
+            top: 50%;         /* Centers it vertically */
+            transform: translateY(-50%); /* Adjusts for centering */
+            z-index: 1000;    /* Ensures it stays on top */
+        }
+
     </style>
 
     <!-- Schema Markup -->
@@ -157,7 +166,7 @@
             <p>Experience time in a beautiful, calming dark theme environment</p>
         </header>
 
-        <div>
+        <div class="ad-container">
             <script type="text/javascript">
                 aclib.runBanner({
                     zoneId: '9544482',
