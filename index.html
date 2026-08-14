@@ -162,7 +162,7 @@
 
         .ad-sidebar-right {
             width: 160px;
-            min-height: 300px;
+            min-height: 600px;
         }
 
         .ad-inline {
@@ -177,16 +177,20 @@
             line-height: 0;
         }
 
-        .ad-mobile-bar {
-            display: none;
+        .ad-sticky-bottom {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             z-index: 1000;
             text-align: center;
-            background: rgba(0, 0, 0, 0.85);
-            padding: 4px 0;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 6px 0;
+            box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .ad-sticky-bottom-mobile {
+            display: none;
         }
 
         @media (max-width: 1100px) {
@@ -200,12 +204,22 @@
                 display: none;
             }
 
-            .ad-mobile-bar {
+            .ad-sticky-bottom-desktop {
+                display: none;
+            }
+
+            .ad-sticky-bottom-mobile {
                 display: block;
             }
 
             body {
                 padding-bottom: 58px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            body {
+                padding-bottom: 72px;
             }
         }
 
@@ -363,26 +377,38 @@
         </footer>
     </div>
 
-        <!-- 160x300 skyscraper (right) -->
+        <!-- 160x600 skyscraper (right) -->
         <aside class="ad-sidebar ad-sidebar-right">
             <div class="ad-slot">
                 <script>
                   atOptions = {
-                    'key' : 'ba79c51dc9e927168f929bc82998ba32',
+                    'key' : 'b9d55c40ef07c29dee017010076346ec',
                     'format' : 'iframe',
-                    'height' : 300,
+                    'height' : 600,
                     'width' : 160,
                     'params' : {}
                   };
                 </script>
-                <script src="https://www.highperformanceformat.com/ba79c51dc9e927168f929bc82998ba32/invoke.js"></script>
+                <script src="https://www.highperformanceformat.com/b9d55c40ef07c29dee017010076346ec/invoke.js"></script>
             </div>
         </aside>
     </div>
 
-    <!-- 320x50 mobile banner (fixed bottom) -->
-    <div class="ad-mobile-bar">
-        <div class="ad-slot">
+    <!-- Sticky bottom banner -->
+    <div class="ad-sticky-bottom">
+        <div class="ad-slot ad-sticky-bottom-desktop">
+            <script>
+              atOptions = {
+                'key' : '92bc69c870b36cdda6f5fcbc404f318c',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/92bc69c870b36cdda6f5fcbc404f318c/invoke.js"></script>
+        </div>
+        <div class="ad-slot ad-sticky-bottom-mobile">
             <script>
               atOptions = {
                 'key' : 'a9a834a6a74f8b4178b65eb8cd788ec6',
