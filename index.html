@@ -50,6 +50,7 @@
             background: linear-gradient(-45deg, #1a1a1a, #2c2c2c);
             color: #ffffff;
             line-height: 1.6;
+            padding-bottom: 0;
         }
 
         .container {
@@ -132,12 +133,81 @@
             color: #67b26f;
         }
 
-        .ad-container {
-            position: absolute;  /* Positions it inside the parent */
-            left: 0;             /* Pushes it completely to the left */
-            top: 0;              /* Aligns it to the top of the parent */
+        .ad-top-banner {
+            text-align: center;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.2);
         }
 
+        .page-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 16px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        .ad-sidebar {
+            flex-shrink: 0;
+            position: sticky;
+            top: 20px;
+        }
+
+        .ad-sidebar-left {
+            width: 160px;
+            min-height: 600px;
+        }
+
+        .ad-sidebar-right {
+            width: 160px;
+            min-height: 300px;
+        }
+
+        .ad-inline {
+            display: flex;
+            justify-content: center;
+            margin: 30px auto;
+            min-height: 250px;
+        }
+
+        .ad-slot {
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .ad-mobile-bar {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 4px 0;
+        }
+
+        @media (max-width: 1100px) {
+            .ad-sidebar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ad-top-banner .ad-leaderboard {
+                display: none;
+            }
+
+            .ad-mobile-bar {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 58px;
+            }
+        }
 
     </style>
 
@@ -176,13 +246,46 @@
         </script>
     </div>
 
+    <!-- 468x60 leaderboard -->
+    <div class="ad-top-banner">
+        <div class="ad-slot ad-leaderboard">
+            <script>
+              atOptions = {
+                'key' : '92bc69c870b36cdda6f5fcbc404f318c',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/92bc69c870b36cdda6f5fcbc404f318c/invoke.js"></script>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- 160x600 skyscraper (left) -->
+        <aside class="ad-sidebar ad-sidebar-left">
+            <div class="ad-slot">
+                <script>
+                  atOptions = {
+                    'key' : 'b9d55c40ef07c29dee017010076346ec',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/b9d55c40ef07c29dee017010076346ec/invoke.js"></script>
+            </div>
+        </aside>
+
     <div class="container">
         <header class="header">
             <h1>Aesthetic Digital Clock</h1>
             <p>Experience time in a beautiful, calming dark theme environment</p>
         </header>
 
-        <div class="ad-container">
+        <div>
             <script type="text/javascript">
                 aclib.runBanner({
                     zoneId: '9544434',
@@ -199,6 +302,22 @@
                      height="400"
                      loading="eager">
                 <a href="clock.html" class="cta-button" title="Open the aesthetic digital clock">Open Clock</a>
+
+                <!-- 300x250 medium rectangle (high CPM) -->
+                <div class="ad-inline">
+                    <div class="ad-slot">
+                        <script>
+                          atOptions = {
+                            'key' : '20b78da222a55aa6adae43bc2624888d',
+                            'format' : 'iframe',
+                            'height' : 250,
+                            'width' : 300,
+                            'params' : {}
+                          };
+                        </script>
+                        <script src="https://www.highperformanceformat.com/20b78da222a55aa6adae43bc2624888d/invoke.js"></script>
+                    </div>
+                </div>
 
                 <div class="features">
                     <h2>Features</h2>
@@ -242,6 +361,39 @@
         <footer>
             <p>© <script>document.write(new Date().getFullYear())</script> Aesthetic Digital Clock. All rights reserved.</p>
         </footer>
+    </div>
+
+        <!-- 160x300 skyscraper (right) -->
+        <aside class="ad-sidebar ad-sidebar-right">
+            <div class="ad-slot">
+                <script>
+                  atOptions = {
+                    'key' : 'ba79c51dc9e927168f929bc82998ba32',
+                    'format' : 'iframe',
+                    'height' : 300,
+                    'width' : 160,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://www.highperformanceformat.com/ba79c51dc9e927168f929bc82998ba32/invoke.js"></script>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 320x50 mobile banner (fixed bottom) -->
+    <div class="ad-mobile-bar">
+        <div class="ad-slot">
+            <script>
+              atOptions = {
+                'key' : 'a9a834a6a74f8b4178b65eb8cd788ec6',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/a9a834a6a74f8b4178b65eb8cd788ec6/invoke.js"></script>
+        </div>
     </div>
 </body>
 </html> 
